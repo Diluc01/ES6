@@ -54,3 +54,20 @@ function getSpeedStatistic(testResults) {
 
   return [min, max, average];
 }
+
+function getSuccessRate(statistic) {
+  // write code here
+  if (statistic === "") {
+    return 0;
+  }
+
+  let counter = 0;
+
+  for (const num of statistic) {
+    if (num === "1") {
+      counter++;
+    }
+  }
+
+  return (counter * 100) / statistic.length;
+}
