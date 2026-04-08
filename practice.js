@@ -12,3 +12,18 @@ function getArraysSum(arr1, arr2) {
 
   return sum;
 }
+
+function makeDecision(fuelRemaining, distance, fuelConsumption) {
+  // write code here
+  if (fuelRemaining < 0 || distance < 0 || fuelConsumption <= 0) {
+    return "please, enter the valid data";
+  }
+
+  const availableDistance = (fuelRemaining / fuelConsumption) * 100;
+
+  if (availableDistance < distance) {
+    return "ask for help";
+  } else {
+    return "reach gas station by themselves";
+  }
+}
