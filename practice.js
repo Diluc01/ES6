@@ -27,3 +27,30 @@ function makeDecision(fuelRemaining, distance, fuelConsumption) {
     return "reach gas station by themselves";
   }
 }
+
+function getSpeedStatistic(testResults) {
+  // write code here
+  if (testResults.length === 0) {
+    return [0, 0, 0];
+  }
+
+  let min = testResults[0];
+  let max = testResults[0];
+  let sum = 0;
+
+  for (const result of testResults) {
+    if (result > max) {
+      max = result;
+    }
+
+    if (result < min) {
+      min = result;
+    }
+
+    sum += result;
+  }
+
+  const average = Math.floor(sum / testResults.length);
+
+  return [min, max, average];
+}
