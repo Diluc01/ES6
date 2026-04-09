@@ -71,3 +71,18 @@ function getSuccessRate(statistic) {
 
   return (counter * 100) / statistic.length;
 }
+
+function getPlan(startProduction, numberOfMonths, percent) {
+  // write code here
+
+  let goals = [];
+  let currentProduction = startProduction;
+
+  for (let i = 0; i < numberOfMonths; i++) {
+    const increase = Math.floor(currentProduction * (percent / 100));
+    currentProduction += increase;
+    goals.push(currentProduction);
+  }
+
+  return goals;
+}
