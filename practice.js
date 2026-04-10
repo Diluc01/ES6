@@ -86,3 +86,18 @@ function getPlan(startProduction, numberOfMonths, percent) {
 
   return goals;
 }
+
+function isJumping(n) {
+  // write code here
+  const string = String(n);
+
+  for (let i = 1; i < string.length; i++) {
+    const diff = string[i] - string[i - 1];
+
+    if (diff !== 1 && diff !== -1) {
+      return "NOT JUMPING";
+    }
+  }
+
+  return "JUMPING";
+}
