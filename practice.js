@@ -135,3 +135,7 @@ function transformState(state, actions) {
     }
   }
 }
+
+function makeRobot(name, wheels, version) {
+  // write code here
+}
